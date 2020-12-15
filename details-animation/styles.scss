@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+details {
+  margin: 0 128px;
+  summary {
+    padding: 16px;
+    background: #ffe505;
+    cursor: pointer;
+    outline: none;
+    border-radius: 10px;
+    margin: 10px 0;
+  }
+  
+  p {
+    margin: 0 10px;
+  }
+}
+
+summary {
+  padding: 16px;
+  background: #ffe505;
+  cursor: pointer;
+  outline: none;
+  border-radius: 10px;
+  
+  &::-webkit-details-marker {
+    background: url("https://www.flaticon.com/svg/static/icons/svg/54/54744.svg") center no-repeat;
+    color: transparent;
+  }
+}
+
+details[open] summary ~ * {
+  animation: sweep 250ms ease-in-out;
+}
+
+@keyframes sweep {
+  from {
+    opacity: 0;
+    margin-top: -10px;
+  } to {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
